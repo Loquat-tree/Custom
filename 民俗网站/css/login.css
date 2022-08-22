@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    background: linear-gradient(#e0e0e0,#bdbdbd);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+.login-box {
+    width: 400px;
+    height: 400px;
+    background: #b0bec5;
+    box-shadow: 0px 15px 25px 0 rgba(0,0,0,.6);
+    padding: 40px;
+    box-sizing: border-box;
+}
+.nav{
+	font-size: 22px;
+    text-align: center;
+    color: #fff;
+	margin:15px;
+}
+#on{
+	color: #455a64;
+	border-bottom: 2px solid #455a64 ;
+}
+#off{
+	color: #FFFFFF;
+	padding-left: 20px;
+}
+.item {
+    height: 45px;
+    border-bottom: 1px solid #fff;
+    color: #FFFFFF;
+	font-weight: 500;
+    margin-bottom: 40px;
+    border-radius: 6px;
+    text-align: center;
+    position: relative;
+}
+.item label {
+    left: 0;
+    top: 12px;
+    position: absolute;
+    transition: all 0.5s linear;
+}
+.item input {
+    width: 100%;
+    height: 70%;
+    color: #455a64;
+    padding-top: 20px;
+    box-sizing: border-box;
+    position: absolute;
+    left: 0;
+    top: 12px;    
+}
+.item input:focus + label, .item input:valid + label {
+    top: 0px;
+    font-size: 12px;        
+}
+a {
+    text-decoration: none;
+}
+input, button {
+    background: transparent;
+    border: none;
+    outline: none;
+}
+.item1{
+	width: 400px;
+	height: 45px;
+	font-weight: 500;
+/* 	margin-bottom: 40px; */
+	border-radius: 6px;
+	text-align: left;
+	position: relative;
+	color: #FFFFFF;
+}
+.item1 .flash1{
+	float: left;
+}
+.item1 input{
+	width: 100px;
+	border-radius: 6px;
+	border-bottom: 1px solid #fff;
+}
+.item1 .flash{
+	width: 180px;
+	height: 35px;
+	vertical-align: bottom;
+	float: left;
+	margin-left: 5px;
+}
+.ph{
+	float: left;
+}
+.word{
+	float: left;
+	height: 30px;
+	line-height: 30px;
+	width:70px;
+	margin-left: 5px;
+}
+.item1 .flash a{
+	color: #455a64;
+}
+.btn {
+	font-size: 15px;
+    padding: 10px 20px;
+    overflow: hidden;
+    margin-top: 20px;
+    color: #455a64;
+    position: relative;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.btn:hover {
+    background: #455a64;
+    border-radius: 5px;
+    color: #fff;
+    box-shadow: 0 0 5px 0 #455a64, 0 0 25px 0 #455a64, 0 0 50px 0 #455a64, 0 0 100px 0 #455a64;    
+}
+.btn > span {
+    position: absolute;
+}
+.btn > span:nth-child(1) {
+    width: 100%;
+    height: 2px;
+    background: -webkit-linear-gradient(left,transparent,#455a64);
+    left: -100%;
+    top: 0px;
+    animation: line1 1s linear infinite;        
+}
+@keyframes line1 {
+    50%,100% {
+        left: 100%;
+    }
+}
+.btn > span:nth-child(2) {
+    width: 2px;
+    height: 100%;
+    background: -webkit-linear-gradient(top,transparent,#455a64);
+    right: 0%;
+    top: -100%;
+    animation: line2 1s 0.25s linear infinite;
+}
+@keyframes line2 {
+    50%,100% {
+        top: 100%;
+    }
+}
+.btn > span:nth-child(3) {
+    width: 100%;
+    height: 2px;
+    background: -webkit-linear-gradient(left,#455a64,transparent);
+    left: 100%;
+    bottom: 0;
+    animation: line3 1s 0.5s linear infinite;
+}
+@keyframes line3 {
+    50%,100% {
+        left: -100%;
+    }
+}
+.btn > span:nth-child(4) {
+    width: 2px;
+    height: 100%;
+    background: -webkit-linear-gradient(top,#455a64,transparent);
+    left: 0px;
+    top: 100%;
+    animation: line4 1s 0.75s linear infinite;
+}
+@keyframes line4 {
+    50%,100% {
+        top: -100%;
+    }
+}
+.download_btn{
+	width: 100px;
+	text-align: center;
+	float: right;
+}
+.QRcode{
+	width: 320px;
+	height: 320px;
+	position: absolute;
+	border-radius:10px ;
+	background-color: #fff;
+	box-shadow: 0 0 8px 0 rgba(0,0,0,0.5);
+	display: none;	
+    top: 160px;
+}
+.QRcode img{
+	margin:40px;
+}

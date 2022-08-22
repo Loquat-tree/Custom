@@ -1,0 +1,202 @@
+*{
+    margin: 0;
+	padding: 0;
+	border: 0;
+}
+ a{
+	color: #000;
+	text-decoration: none;
+}
+ul{
+	list-style:none;;
+}
+#box{
+	background-color: #f7f9fb;
+	font-size: "宋体";
+}
+#nav{
+	width: 100%;
+	height: 60px;
+	top:0;
+	left: 0;
+	color: #FFFFFF;
+	background-color: #FFFFFF;
+}
+#nav a:hover{
+	color: #c62828;
+}
+.middle{
+	width: 80%;
+	height: 60px;
+	margin: auto;
+}
+#nav .on a{
+	color: cadetblue;
+}
+.list{
+	float: right;
+	margin: 15px;
+}
+#nav ul{
+	float: left;
+}
+#nav ul li{
+	height: 25px;
+	font-family: "行楷";
+	display: inline-block;
+	margin-left: 10px;
+	font-weight: 900;
+}
+.nav1{
+	background-color:  #FFFFFF;
+}
+.nav1 ul li a{
+	color: #000000;
+}
+.list ul>li>ul{
+	width: 95px;
+	height: 100px;
+	margin-left:-20px ;
+	margin-top: 5px;
+	position: absolute;
+	background: #FFFFFF; 
+	box- shadow: 0 0 5px rgba(0, 0, 0, 0.5);		
+}
+.list ul>li>ul>li{
+	width: 95px;
+	height: 40px;
+	line-height: 40px;	 	
+}
+.logo{
+	width:370px ;
+	height:65px;
+	float: left;
+	line-height: 65px;
+	position: relative;
+	color: #000;
+}
+.word{
+	width: 270px;
+	height: 65px;
+	margin-top: 5px;
+	float: right;
+}
+.w{
+	height: 30px;
+	line-height: 30px;
+	font-family: Berlin Sans FB;
+}
+.w h1{
+	padding-top: 5px;
+	font-family: "华文行楷";
+	font-weight: 100;
+}
+.w2{
+	padding-left: 5px;	
+	font-size: 20px;
+}
+#insert{
+	width: 72%;
+	margin: auto;
+	margin-top: 30px;
+/* 	top: 60px; */
+}
+#insert img{
+	width:100% ;
+}
+#main{
+	width: 72%;
+	margin: auto;
+	min-height: 132vh;
+	background-color: #FFFFFF;
+	font-weight: 600;
+	margin-top: 20px;
+	/* border: none; */
+}
+.left{
+	width: 65%;
+	float: left;
+}
+.left1{
+	width: 100%;
+}
+.a{
+	width: 92%;
+	height: 155px;
+	margin: auto;
+	margin-top:30px;
+	border-bottom: 1px dashed #444444;
+}
+.a-left{
+	width: 29%;
+	height: 125px;
+	float: left;	
+}
+.a-left img{
+	width: 100%;
+	height: 125px;
+}
+.a-right{
+	width: 68%;
+	height: 150px;
+	float: left;
+	text-indent: 2px;
+	margin-left: 15px;
+}
+.a-right font{
+	font-size: 20px;
+	font-weight: 550;
+}
+.a-right p{
+	text-indent: 4px;
+	font-size: 14px;
+	font-weight: 350;
+	padding-top: 10px;
+}
+.right{
+	width: 33%;
+	height: 620px;
+	float: left;
+	margin-left: 15px;
+}
+fieldset{
+	background: #fff;
+	padding-left: 15px;
+	width: 355px;
+	height: 40px;
+	color: #444;
+	border-radius: 10px;
+	border:2px solid #c62828;
+	left: 0px;
+	font-size: 20px;
+	font-family: "楷体";
+	margin-top: 8px;
+}
+.fir ul{
+	width: 100%;	
+}
+.fir ul li{
+	width: 340px;
+	height: 40px;
+	line-height:40px;
+	border-bottom: 1px #444 dashed;
+	list-style: disc;
+	text-indent: -5px;
+	color: #C62828;
+	margin-left:30px ;
+	font-size: 14px;
+	font-weight: 500;
+}
+#footer{
+	width: 100%;
+	height: 130px;
+	text-align: center;
+	line-height: 80px;
+	background-color:  #f1f0eb;
+	font-size: 12px;
+	margin-top: 50px;
+}
+#footer p{
+	height: 30px;
+	line-height: 30px;
+}
