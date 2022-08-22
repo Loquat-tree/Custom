@@ -1,0 +1,147 @@
+*{
+    border: none;
+    margin: none;
+    padding: none;
+    /* background: linear-gradient(to right,#5ca1ad,#f8ddba); */
+    letter-spacing: 2px;
+}
+body{
+    background: url('../img/background.jpg') no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration:underline;
+}
+#box{
+    width: 65%;
+    height:80vh;
+    background-color: #e0e0e0;
+    box-shadow:5px 5px 5px 5px #746363;
+    border-radius: 10px;
+    margin:0 auto;
+    margin-top: 5%;
+}
+.left{
+    width: 39%;
+    height: 100%;
+    float: left;
+    color: #fff;
+    text-align: center;
+    background:rgb(49, 89, 163);
+    font-weight: 800;
+}
+.logo{
+    width: 100%;
+    height: 20%;
+    float: left;
+    top: 0;
+}
+.logo img{
+    width:30%;
+    float: left;
+    height: 88%;
+}
+.intro{
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    float: left;
+    text-align: left;
+    margin-top: 15%;
+    margin-left: 15%;
+}
+.intro h1{
+    letter-spacing: 2px;
+}
+.right{
+    width: 60%;
+    height: 80%;
+    margin: 0 auto;
+    float:left;
+    text-align: center;
+    margin-top: 5%;
+}
+.right h2{
+    color: black;
+    letter-spacing: 5px;
+    display: inline;
+}
+#signupForm{
+    width: 100%;
+    height: 80%;
+    margin-top: 5%;
+}
+#signupForm  div{
+    width: 82%;
+    height: 35px;
+    margin: 0 auto;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 3%;
+}
+#signupForm label{
+    width: 28%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    text-align: left;
+}
+#signupForm input{
+    width: 50%;
+    height:35px;
+    border-radius: 5px;
+    border: 1px #e0e0e0 solid;
+    text-align: left;
+    font-size: 15px;
+    position: relative;
+}
+#signupForm #code{
+    height: 35px;
+    margin-right: 6%;
+}
+#signupForm #btnGetCode{
+    width: 110px;
+    height: 35px;
+    line-height: 35px;
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+    text-align: center;
+}
+#regBtn{
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    background: rgb(49, 89, 163);
+    text-align: center;
+    border: 1px solid black;
+    margin-right: 31%;
+}
+.list{
+    float: left;
+}
+#signupForm .list label{
+    width: 45%;
+    height: 17px;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: -5%;
+    /* border: 1px solid black; */
+}
+#signupForm #check{
+    width: 17px;
+    height: 17px;
+ }
+.error{
+    color: red;
+}

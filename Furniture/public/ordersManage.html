@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>用户管理界面</title>
+    <link rel="stylesheet" type="text/css" href="css/ordersManage.css">
+    <link rel="stylesheet" type="text/css" href="css/iconfont.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+</head>
+
+<body>
+    <div id="header">
+        <ul>
+            <li class="logo"><img src="./img/logo1.png" alt=""></li>
+            <li>
+                <h2>雅舍家具网站后台管理系统</h2>
+            </li>
+        </ul>
+        <div class="log_out"><i class="fa fa-power-off"></i></div>
+    </div>
+    <div id="content">
+        <div id="item">
+            <div class="expand-btn">
+                <div class="mini-btn">
+                    <label>
+                        <input type="checkbox" checked="checked">
+                        <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="50" cy="50" r="30" />
+                            <path class="line--1" d="M0 40h62c18 0 18-20-17 5L31 55" />
+                            <path class="line--2" d="M0 50h80" />
+                            <path class="line--3" d="M0 60h62c18 0 18 20-17-5L31 45" />
+                        </svg>
+                    </label>
+                </div>
+            </div>
+            <div class="left_menu">
+                <div class="scroll">
+                    <div class="menu">
+                        <ul>
+                            <li class="list">
+                                <a href="javascript:;">
+                                    <i class="my-icon lsm-sidebar-icon icon-users"></i><span>用户管理</span>
+                                    <i class="my-icon lsm-sidebar-more"></i></a>
+                                <ul>
+                                    <li><a href="OrdersManage.html"><span>用户列表</span></a></li>
+                                    <li><a href="javascript:;"><span>沙之国</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="list">
+                                <a href="javascript:;"><i
+                                        class="my-icon lsm-sidebar-icon icon_2"></i><span>商品管理</span><i
+                                        class="my-icon lsm-sidebar-more"></i></a>
+                                <ul>
+                                    <li><a href="goodsManage.html"><span>商品列表</span></a></li>
+                                    <li><a href="javascript:;"><span>分类列表</span></a></li>
+                                    <li><a href="javascript:;"><span>八门遁甲1</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="list">
+                                <a href="javascript:;"><i class="my-icon lsm-sidebar-icon icon-iconset0308"></i>
+                                    <span>订单管理</span>
+                                    <i class="my-icon lsm-sidebar-more"></i></a>
+                                <ul>
+                                    <li><a href="ordersManage.html"><span>订单列表</span></a></li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <i class="my-icon lsm-sidebar-icon "></i><span>二级菜单11</span><i
+                                                class="my-icon lsm-sidebar-more"></i></a>
+                                        <ul>
+                                            <li><a href="javascript:;"><span>地爆天星</span></a></li>
+                                            <li><a href="javascript:;"><span>无线月读</span></a></li>
+                                            <li><a href="javascript:;"><span>一乐拉面</span></a></li>
+                                            <li><a href="javascript:;"><span>血继限界</span></a></li>
+                                            <li><a href="javascript:;"><span>双蛇相杀</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li><a href="javascript:;"><span>火影忍者</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="list">
+                                <a href="javascript:;">
+                                    <i class="my-icon lsm-sidebar-icon icon_1"></i><span>系统设置</span><i
+                                        class="my-icon lsm-sidebar-more"></i>
+                                </a>
+
+                                <ul>
+                                    <li><a href="javascript:;"><span>地爆天星</span></a></li>
+                                    <li><a class="active" href="javascript:;"><span>无线月读</span></a></li>
+                                    <li><a href="javascript:;"><span>一乐拉面</span></a></li>
+                                    <li class="list">
+                                        <a href="javascript:;">
+                                            <i class="my-icon lsm-sidebar-icon "></i><span>二级菜单11</span><i
+                                                class="my-icon lsm-sidebar-more"></i></a>
+                                        <ul>
+                                            <li><a href="javascript:;"><span>地爆天星</span></a></li>
+                                            <li><a href="javascript:;"><span>无线月读</span></a></li>
+                                            <li><a href="javascript:;"><span>一乐拉面</span></a></li>
+                                            <li><a href="javascript:;"><span>血继限界</span></a></li>
+                                            <li><a href="javascript:;"><span>双蛇相杀</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="list">
+                                        <a href="javascript:;">
+                                            <i class="my-icon lsm-sidebar-icon "></i><span>二级菜单22</span><i
+                                                class="my-icon lsm-sidebar-more"></i></a>
+                                        <ul>
+                                            <li><a href="javascript:;"><span>血继限界</span></a></li>
+                                            <li><a href="javascript:;"><span>秽土转生</span></a></li>
+                                            <li><a href="javascript:;"><span>万象天引</span></a></li>
+                                            <li><a href="javascript:;"><span>尸鬼封尽</span></a></li>
+                                            <li><a href="javascript:;"><span>飞雷神之术</span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div id="msg">
+            <nav>
+                <ul>
+                    <li><span>首页</span><i class="my-icon lsm-sidebar-more"></i></li>
+                    <li><span>用户管理</span><i class="my-icon lsm-sidebar-more"></i></li>
+                    <li><span>用户列表</span></li>
+                </ul>
+            </nav>
+            <div id="info">
+                <div id="search">
+                    <div class="bar">
+                        <select id="searchType">
+                            <option value="username"></option>
+                        </select>
+                        <input type="text" placeholder="请输入..." id="searchValue">
+                        <i class="fa fa-search" id="searchBtn"></i>
+                    </div>
+                    <input type="button" value="添加订单" id="add">
+                    <div class="bg"></div>
+                    <div id="chart">
+                        <h2>添加订单</h2>
+                        <ul>
+                            <li style="margin-top: 0;">
+                                <label for="username">用户名</label>
+                                <input id="username" name="username" type="text">
+                            </li>
+                            <li>
+                                <label for="goods_name">产品名称</label>
+                                <input type="text" name="goods_name" id="goods_name">
+                            </li>
+                            <li>
+                                <label for="phone">联系方式</label>
+                                <input type="text" id="phone">
+                            </li>
+                            <li>
+                                <label for="price">单价</label>
+                                <input id="price" name="price" type="text">
+                            </li>
+                            <li>
+                                <label for="address">地址</label>
+                                <input type="text" name="" id="address">
+                            </li>
+                            <li>
+                                <label for="order_count">下单数量</label>
+                                <input type="text" name="order_count" id="order_count">
+                            </li>
+                            <p>
+                                <button class="cancel">取消</button>
+                                <button class="addOrders">确定</button>
+                            </p>
+                        </ul>
+                    </div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <td>用户名</td>
+                            <td>产品名称</td>
+                            <td>联系方式</td>
+                            <td>单价</td>
+                            <td>下单数量</td>
+                            <td>地址</td>
+                            <td>操作</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <div class="background"></div>
+                        <div id="updateChart">
+                            <h2>修改订单信息</h2>
+                            <ul>
+                                <input type="hidden" id="updateId">
+                                <li style="margin-top: 0;">
+                                    <label for="username">用户名</label>
+                                    <input id="updateUsername" name="username" type="text">
+                                </li>
+                                <li>
+                                    <label for="goods_name">产品名称</label>
+                                    <input type="text" name="goods_name" id="updateGoods_name">
+                                </li>
+                                <li>
+                                    <label for="phone">联系方式</label>
+                                    <input type="text" id="updatePhone">
+                                </li>
+                                <li>
+                                    <label for="price">单价</label>
+                                    <input id="updatePrice" name="price" type="text">
+                                </li>
+                                <li>
+                                    <label for="address">地址</label>
+                                    <input type="text" name="" id="updateAddress">
+                                </li>
+                                <li>
+                                    <label for="order_count">下单数量</label>
+                                    <input type="text" name="order_count" id="updateOrder_count">
+                                </li>
+                                <p>
+                                    <button class="remove">取消</button>
+                                    <button class="updateOrders">确定</button>
+                                </p>
+                            </ul>
+                        </div>
+                    </tbody>
+                </table>
+                <div class="page">
+                    <button id="firstPage">首页</button>
+                    <button id="prePage">上一页</button>
+                    <span><strong id="currentPage"></strong> / <strong id="pages"></strong> 页 </span>
+                    <button id="nextPage">下一页</button>
+                    <button id="lastPage">尾页</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="javascripts/jquery.min.js"></script>
+<script type="text/javascript" src="javascripts/jquery.slimscroll.min.js"></script>
+<script type="text/javascript" src="javascripts/UsersManage.js"></script>
+<script>
+    $(document).ready(function () {
+        //data用来存放关于分页和搜索的相关数据
+        let data = {
+            searchType: 'username',
+            searchValue: '',
+            currentPage: 1,
+            pageSize: 5
+        };
+
+        getOrders();
+        function getOrders() {
+            $.ajax({
+                url: '/manage/getOrders',
+                data: {
+                    currentPage: data.currentPage,
+                    pageSize: data.pageSize,
+                    searchType: data.searchType,
+                    searchValue: data.searchValue
+                },
+                type: 'get',
+                success({ message, status, ordersData }) {
+                    // console.log(ordersData)
+                    if (status) {
+                        data = {
+                            ...data,
+                            ...ordersData
+                        }
+                        //渲染数据
+                        console.log(ordersData)
+                        const str = ordersData.ordersData.map(function (item, index) {
+                            return `
+              <tr>
+                <td>${item.username}</td>
+                <td>${item.goods_name}</td>
+                <td>${item.phone}</td>
+                <td>${item.price}</td>
+                <td>${item.order_count}</td>
+                <td>${item.addr}</td>
+                <td>
+                  <button id="updateBtn" data-id="${item._id}">修改</button>
+                  
+                  <button id="deleteBtn" data-id="${item._id}">删除</button>
+                </td>
+                
+              </tr>
+              `;
+                        }).join('');
+                        $('tbody').html(str);
+                        $('#currentPage').text(data.currentPage);
+                        $('#pages').text(data.pages);
+                    }
+                }
+            })
+        }
+
+        //查询订单信息
+        $('#searchBtn').click(function () {
+            const searchType = $('#searchType').val()
+            const searchValue = $('#searchValue').val();
+            data = {
+                ...data,//保留data原本的数据
+                currentPage: 1,
+                searchType,
+                searchValue
+            }
+            getOrders();
+        })
+
+        //分页列表
+        $('#firstPage').click(function () {
+            data.currentPage = 1;
+            getOrders();
+        })
+        $('#nextPage').click(function () {
+            if (data.currentPage < data.pages) {
+                data.currentPage++;
+                getOrders();
+            }
+        })
+        $('#prePage').click(function () {
+            if (data.currentPage > 1) {
+                data.currentPage--;
+                getOrders();
+            }
+        })
+        $('#lastPage').click(function () {
+            data.currentPage = data.pages;
+            getOrders();
+        })
+        $('#pageSize')
+
+        $('#add').click(function () {
+            $('.bg').css({ 'display': 'block' });
+            center($('#chart'));
+            check($(this).parent(), $('.addOrders'), $('.cancel'));
+        });
+
+        // 居中 
+        function center(obj) {
+            var screenWidth = $(window).width(), screenHeight = $(window).height(); //当前浏览器窗口的 宽高 
+            var scrolltop = $(document).scrollTop();//获取当前窗口距离页面顶部高度 
+            var objLeft = (screenWidth - obj.width()) / 2;
+            var objTop = (screenHeight - obj.height()) / 2 + scrolltop;
+            obj.css({ left: objLeft + 'px', top: objTop + 'px', 'display': 'block' });
+            //浏览器窗口大小改变时 
+            $(window).resize(function () {
+                screenWidth = $(window).width();
+                screenHeight = $(window).height();
+                scrolltop = $(document).scrollTop();
+                objLeft = (screenWidth - obj.width()) / 2;
+                objTop = (screenHeight - obj.height()) / 2 + scrolltop;
+                obj.css({ left: objLeft + 'px', top: objTop + 'px', 'display': 'block' });
+            });
+            //浏览器有滚动条时的操作、 
+            $(window).scroll(function () {
+                screenWidth = $(window).width();
+                screenHeight = $(widow).height();
+                scrolltop = $(document).scrollTop();
+                objLeft = (screenWidth - obj.width()) / 2;
+                objTop = (screenHeight - obj.height()) / 2 + scrolltop;
+                obj.css({ left: objLeft + 'px', top: objTop + 'px', 'display': 'block' });
+            });
+        }
+        //确定的操作 
+        function check(obj, obj1, obj2) {
+            obj1.click(function () {
+                closed($('.bg'), $('#chart'));
+            });
+        }
+        // 取消的操作 
+        // function closed() {
+        $('.cancel').click(function () {
+            $('.bg').css({ 'display': 'none' })
+            $('#chart').css({ 'display': 'none' })
+        })
+        $('.remove').click(function () {
+            $('.background').css({ 'display': 'none' })
+            $('#updateChart').css({ 'display': 'none' })
+        })
+        // }
+
+        //新增用户
+        $('.addOrders').click(function () {
+            const username = $('#username').val();
+            const gender = $('[name=gender]:checked').val();
+            const email = $('#email').val();
+            const address = $('#address').val();
+            const order_count = $('#order_count').val();
+            const phone = $('#phone').val();
+            $.ajax({
+                type: 'post',
+                url: '/manage/addOrders',
+                data: {
+                    username,
+                    gender,
+                    order_count,
+                    address,
+                    email,
+                    phone
+                },
+                success(msg) {
+                    if (msg.status) {
+                        getOrders();
+                    }
+                }
+            })
+        })
+
+
+        //删除订单
+        $('tbody').on('click', '#deleteBtn', function () {
+            const _id = $(this).data('id');
+            const conf = confirm('您确定要删除此订单吗？');
+            if (!conf) {
+                return;
+            }
+            $.ajax({
+                type: 'post',
+                url: '/manage/deleteOrders',
+                data: { _id },
+                success(msg) {
+                    if (msg.status) {
+                        alert('删除成功!');
+                        if (data.ordersData.length == 1) {
+                            data.currentPage--;
+                        }
+                        getOrders();
+                    } else {
+                        return
+                    }
+                }
+            })
+        })
+
+        //修改用户信息
+        $('tbody').on('click', '#updateBtn', function () {
+            const _id = $(this).data('id');
+            $('.background').css({ 'display': 'block' });
+            center($('#updateChart'));
+            check($(this).parent(), $('.updateOrders'), $('.remove'));
+            //获取要修改的用户信息
+            $.ajax({
+                type: 'get',
+                url: '/manage/getUpdateOrders',
+                data: { _id },
+                success(msg) {
+                    if (msg.status) {
+                        $('#updateUsername').val(msg.getUpdateData.username);
+                        $('#updateGoods_name').val(msg.getUpdateData.goods_name);
+                        $('#updateOrder_count').val(msg.getUpdateData.order_count);
+                        $('#updatePrice').val(msg.getUpdateData.price);
+                        $('#updateAddress').val(msg.getUpdateData.addr);
+                        $('#updatePhone').val(msg.getUpdateData.phone);
+                        $('#updateId').val(msg.getUpdateData._id);
+                        getOrders();
+                    }
+                    console.log(msg);
+                }
+            })
+        })
+
+        //确认修改
+        $('.updateOrders').click(function () {
+            alert('修改成功！')
+            $('.background').css({ 'display': 'none' })
+            $('#updateChart').css({ 'display': 'none' })
+            const _id = $('#updateId').val();
+            const username = $('#updateUsername').val();
+            const goods_name = $('#updateGoods_name').val();
+            const price = $('#updatePrice').val();
+            const order_count = $('#updateOrder_count').val();
+            const address = $('#updateAddress').val();
+            const phone = $('#updatePhone').val();
+            $.ajax({
+                url: '/manage/updateOrders',
+                data: { _id, username, order_count, price, goods_name, address, phone },
+                type: 'post',
+                success(msg) {
+                    console.log(msg)
+                    getOrders()
+                }
+            })
+        })
+
+        $('.log_out i').click(function () {
+            location.href = 'index.html';
+            
+        })
+    });
+</script>
+
+</html>

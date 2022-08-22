@@ -1,0 +1,189 @@
+*{
+    border: none;
+    margin: none;
+    padding: none;
+    /* background: linear-gradient(to right,#5ca1ad,#f8ddba); */
+    letter-spacing: 2px;
+}
+body{
+    background: url('../img/background.jpg') no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+}
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration:underline;
+}
+#box{
+    width: 65%;
+    height:80vh;
+    background-color: #e0e0e0;
+    box-shadow:5px 5px 5px 5px #746363;
+    border-radius: 10px;
+    margin:0 auto;
+    margin-top: 5%;
+}
+.left{
+    width: 39%;
+    height: 100%;
+    float: left;
+    color: #fff;
+    text-align: center;
+    background:rgb(49, 89, 163);
+    font-weight: 800;
+}
+.logo{
+    width: 100%;
+    height: 20%;
+    float: left;
+    top: 0;
+}
+.logo img{
+    width:30%;
+    float: left;
+    height: 88%;
+}
+.intro{
+    width: 85%;
+    height: auto;
+    margin: 0 auto;
+    float: left;
+    text-align: left;
+    margin-top: 15%;
+    margin-left: 15%;
+}
+.intro h1{
+    letter-spacing: 2px;
+}
+.right{
+    width: 60%;
+    height: 80%;
+    margin: 0 auto;
+    float:left;
+    text-align: center;
+    margin-top: 5%;
+}
+.right h2{
+    color: black;
+    letter-spacing: 5px;
+    display: inline;
+}
+.right a{
+    color: rgb(46, 54, 126);
+}
+.item{
+    width: 72%;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 2%;
+    text-align: left;
+}
+.item input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height:40px;
+    border-radius: 8px;
+    border-bottom: 1px #e0e0e0 solid;
+    text-align: left;
+    margin-top: 5%;
+    font-size: 15px;
+}
+.create{
+    width: 100%;
+    height: 35px;
+    margin-top: 8%;
+}
+.create button{
+    width: 100px;
+    height: 35px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 15px;
+    float: left;
+    background: rgb(49, 89, 163);
+}
+.create span{
+    line-height: 35px;
+    float: right;
+}
+.create a:hover{
+    color: #5d4c7c;
+}
+.item #check{
+   width: 17px;
+   height: 17px;
+   vertical-align: bottom;
+}
+label{
+    margin-left: 2%;
+    vertical-align: bottom;
+    font-size: 14px;
+    font-weight: 300;
+}
+.item a{
+    text-decoration: underline;
+}
+.other{
+    width: 72%;
+    height: 12vh;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+.other h4{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande';
+    color: rgb(71, 63, 63);
+    font-weight: 800;
+    margin: 0;
+}
+.style{
+    width: 100%;
+    height: 9vh;
+    font-size: 20px;
+    letter-spacing: 10px;
+    margin-top: 5%;
+}
+.text{
+    width: 25%;
+    float: left;
+}
+.text .fa{
+    width: 38px;
+    height: 38px;
+    line-height: 38px;
+    border: 1px solid #a09a9a;
+    border-radius: 20px;
+    cursor: pointer;
+}
+.text p{
+    margin: 0;
+    margin-top: 3%;
+    font-size: 13px;
+}
+.text a{
+    color: black;
+}
+.QRcode{
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	border-radius:10px ;
+	background-color: #fff;
+	box-shadow: 0 0 8px 0 rgba(0,0,0,0.5);
+	display: none;	
+    top: 210px;
+    background: #fff;
+}
+.QRcode img{
+	margin:25px;
+}
+.QRcode1{
+    left: 48%;
+}
+.QRcode2{
+    left: 54%;
+}

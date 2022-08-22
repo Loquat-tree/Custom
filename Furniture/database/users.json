@@ -1,0 +1,14 @@
+{
+  "RECORDS": [
+    {
+      "_id": "622845f5a64500008d004e35",
+      "addressList": "[ ]",
+      "cartList": "[ \"goods_id\", \"goods_name\", \"price\", \"pic\", \"stock\", \"checked\" ]",
+      "email": "2388124203@qq.com",
+      "ordersList": "[ ]",
+      "password": "123456",
+      "user_id": "01",
+      "username": "sxt"
+    }
+  ]
+}

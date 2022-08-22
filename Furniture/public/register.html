@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="./css/register.css">
+</head>
+
+<body>
+    <div id="box">
+        <div class="left">
+            <div class="logo"><img src="./img/logo1.png"></div>
+            <div class="intro">
+                <h1>你好!</h1>
+                <h1>为大众创造更美好</h1>
+                <h1 style="margin:0">的日常生活</h1>
+            </div>
+        </div>
+        <div class="right">
+            <br><br>
+            <h2>欢迎来到</h2>
+            <h2 style="color: rgb(46, 54, 126);">雅舍</h2>
+            <h2> , 很高兴您来到这里</h2>
+            <form id="signupForm">
+                <div>
+                    <label for="username">用户名</label>
+                    <input id="username" name="username" type="text">
+                </div>
+                <div>
+                    <label for="password">密码</label>
+                    <input id="password" name="password" type="password">
+                </div>
+                <div>
+                    <label for="confirm_password">重复密码</label>
+                    <input id="confirm_password" name="confirm_password" type="password">
+                </div>
+                <div>
+                    <label for="email">请输入邮箱</label>
+                    <input id="email" name="email" type="email">
+                </div>
+                <div>
+                    <input type="text" placeholder="请输入验证码" id="code">
+                    <input id="btnGetCode" value="获取验证码" type="button"></input>
+                </div>
+                <div>
+                    <button id="regBtn">注册</button>
+                    <span>已有账号?去<a href="login.html">登录</a></span>
+                </div>
+                <div class="list">
+                    <label for="check">我已接受并同意雅舍<a>隐私条款</a></label>
+                    <input type="checkbox" id="check" name="check">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+<script src="./javascripts/jquery.min.js"></script>
+<script src="./javascripts/jquery.validate.min.js"></script>
+<script>
+    $().ready(function () {
+        // 在键盘按下并释放及提交后验证提交表单
+        $("#signupForm").validate({
+            rules: {
+                username: {
+                    required: true,
+                    checkName: true,
+                },
+                password: {
+                    required: true,
+                    checkPwd: true
+                },
+                confirm_password: {
+                    required: true,
+                    checkPwd: true,
+                    equalTo: "#password"
+                },
+                email: {
+                    required: true,
+                    checkEmail: true
+                },
+                code: "required",
+                check: "required"
+            },
+            messages: {
+                username: {
+                    required: "用户名不能为空!",
+                    minlength: "用户名必需由两个字母组成"
+                },
+                password: {
+                    required: "密码不能为空!",
+                },
+                confirm_password: {
+                    required: "* 必填!",
+                    equalTo: "两次密码输入不一致"
+                },
+                email: {
+                    required: "* 必填!",
+                    email: "*请输入正确的邮箱格式!",
+                },
+                code: "不能为空!",
+                check: "请先同意协议!"
+            },
+
+            submitHandler: function (form) {
+                const username = $('#username').val();
+                const password = $('#password').val();
+                const email = $('#email').val();
+                const code=$('#code').val();
+                $.ajax({
+                    //设置前后端连接的接口
+                    url: '/users/register',
+                    //设置前端发送给后端的数据
+                    data: {
+                        username,
+                        password,
+                        email,
+                    },
+                    //用于请求类型:get、post(put、delete)
+                    type: 'post',
+                    //请求成功后触发success方法，msg用于接收后端响应回来的结果
+                    success(msg) {
+                        if (msg.status) {
+                            alert('注册成功')
+                            location.href='login.html'
+                        } else {
+                            alert('注册失败,请检查信息是否填写完整!');
+                        }
+                    }
+                })
+            }
+        });
+        //自定义正则表达示验证方法 
+        $.validator.addMethod("checkEmail", function (value, element, params) {
+            var checkEmail = /^[a-z0-9]+@([a-z0-9]+\.)+[a-z]{2,4}$/i;
+            return this.optional(element) || (checkEmail.test(value));
+        }, "*请输入正确的邮箱格式！");
+        $.validator.addMethod("checkName", function (value, element, params) {
+            var checkName = /^\w{4,16}$/g;
+            return this.optional(element) || (checkName.test(value));
+        }, "*只允许4-16位英文字母、数字或者下划线!");
+
+        $.validator.addMethod("checkPwd", function (value, element, params) {
+            var checkPwd = /^\w{6,16}$/g;
+            return this.optional(element) || (checkPwd.test(value));
+        }, "*只允许6-16位英文字母、数字或者下划线！");
+
+        $('#username').blur(function () {
+            const username = $('#username').val();
+            $.ajax({
+                //设置前后端连接的接口
+                url: '/users/isAccess',
+                //设置前端发送给后端的数据
+                data: { username },
+                //用于请求类型:get、post(put、delete)
+                type: 'post',
+                //请求成功后触发success方法，msg用于接收后端响应回来的结果
+                success(msg) {
+                    if (!msg.status) {
+                        $('#regBtn').prop('disabled', true);
+                        alert('账号已存在!');
+                    } else {
+                        $('#regBtn').prop('disabled', false);
+                    }
+                }
+            })
+        })
+        $('#btnGetCode').click(function () {
+            const email = $('#email').val();
+            if (email == "") {
+                alert('请先输入邮箱!')
+            } else {
+                $.ajax({
+                    url: '/email/isRegister',
+                    data: { email },
+                    type: 'post',
+                    success(msg) {
+                        if (!msg.status) {
+                            alert('该邮箱已被注册!');
+                        } else {
+                            var time = 60;//定义60秒的倒计时
+                            var timing = setInterval(function () {
+                                time--;
+                                $('#btnGetCode').attr("value", "请" + time + "秒后再试");
+                                if (time === 0) {
+                                    clearInterval(timing);
+                                    $('#btnGetCode').attr("value", "发送验证码");
+                                    $('#btnGetCode').attr("disabled", false);//按键可用
+                                } else {
+                                    $('#btnGetCode').attr("disabled", true);//按键不可用
+                                }
+                            }, 1000)
+                            $.ajax({
+                                url: '/email/getCode',
+                                data: { email },
+                                type: 'get',
+                                success() {
+                                    alert('验证码发送成功,请及时输入');
+                                }
+                            });
+                        }
+                    }
+                })
+
+            }
+        })
+        
+    });
+
+</script>
+
+</html>

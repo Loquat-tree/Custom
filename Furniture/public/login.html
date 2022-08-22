@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/v4-shims.css">
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+
+<body>
+    <div id="box">
+        <div class="left">
+            <div class="logo"><img src="./img/logo1.png"></div>
+            <div class="intro">
+                <h1>你好!</h1>
+                <h1>为大众创造更美好</h1>
+                <h1 style="margin:0">的日常生活</h1>
+            </div>
+        </div>
+        <div class="right">
+            <br><br>
+            <h2>欢迎来到</h2>
+            <h2><a href="./index.html">雅舍</a></h2>
+            <h2> , 很高兴您来到这里</h2>
+            <div class="item">
+                <input type="text" id="username" placeholder="用户名/邮箱/手机号">
+                <input type="password" id="password" placeholder="密码">
+                <div class="create">
+                    <button id="btn">登录</button>
+                    <span>没有账号?<a href="register.html">创建一个</a></span>
+                </div>
+                <br>
+                <input type="checkbox" id="check"><label>我已接受并同意雅舍<a>隐私条款</a></label>
+            </div>
+            <div class="other">
+                <h4>— 其他登录方式 —</h4>
+                <div class="style">
+                    <div class="text text1" style="margin-left: 15%;">
+                        <i class="fa fa-weixin" aria-hidden="true" style="color: rgb(61, 167, 61);"></i>
+                        <a href="#">
+                            <p>微信登录</p>
+                        </a>
+                        <div class="QRcode QRcode1"><img src="img/QRcode.png" /></div>
+                    </div>
+                    <div class="text text2">
+                        <i class="fa fa-qq" style="color: #3e75da;"></i>
+                        <a href="#">
+                            <p>QQ登录</p>
+                        </a>
+                        <div class="QRcode QRcode2"><img src="img/QRcode.png" /></div>
+                    </div>
+                    <div class="text text3">
+                        <i class="fa fa-user-circle-o"></i>
+                        <a href="#">
+                            <p>手机验证码登录</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./javascripts/jquery.min.js"></script>
+    <script>
+        $(".text1").click(function () {
+            if ($(".QRcode1").css("display") == "none") {
+                $(".QRcode1").show();
+            } else {
+                $(".QRcode1").hide();
+            }
+        })
+        $(".text2").click(function () {
+            if ($(".QRcode2").css("display") == "none") {
+                $(".QRcode2").show();
+            } else {
+                $(".QRcode2").hide();
+            }
+        })
+        $(function () {
+            $('#btn').click(function () {
+                const username = $('#username').val();
+                const password = $('#password').val();
+                if ($('#check').is(':checked')) {
+                    $.ajax({
+                        //设置前后端连接的接口
+                        url: '/users/login',
+                        //设置前端发送给后端的数据
+                        data: {
+                            username,
+                            password
+                        },
+                        //用于请求类型:get、post(put、delete)
+                        type: 'post',
+                        //请求成功后触发success方法，msg用于接收后端响应回来的结果
+                        success(msg) {
+                            console.log(msg)
+                            if (msg.status) {
+                                alert('登录成功');
+                                localStorage.token = msg.token;
+                                location.href='product_detail.html'
+                            } else {
+                                alert('登录失败,用户名或密码错误!');
+                            }
+                        }
+                    });
+                } else {
+                    alert('请先同意协议');
+                }
+                return false;
+            });
+        });
+    </script>
+</body>
+
+</html>

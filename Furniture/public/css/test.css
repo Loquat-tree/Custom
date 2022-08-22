@@ -1,0 +1,15 @@
+.lsm-sidebar-more {
+    float: right;
+    margin-right: 20px;
+    font-size: 12px;
+    transition: transform .3s;
+}
+
+/* 导航右侧箭头 换用其他字体需要替换*/
+.lsm-sidebar-more::after {
+    content: "\e621";
+}
+
+.menu-show>a>i.my-icon.lsm-sidebar-more {
+    transform: rotate(90deg);
+}
